@@ -22,6 +22,7 @@ do
     cp $CDIR/$f $build_dir/
 done
 cp $CDIR/zshrc $build_dir/.zshrc
+cp $CDIR/p10k.zsh $build_dir/.p10k.zsh
 
 distfile=zsh-5.8-linux-x86_64
 url="https://github.com/romkatv/zsh-bin/releases/download/v4.0.1/$distfile.tar.gz"

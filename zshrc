@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.xxh/shells/xxh-shell-zsh/build/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 CURRENT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 if [[ $XXH_VERBOSE == '2' ]]; then
@@ -37,5 +44,8 @@ done
 setopt -o nomatch
 
 export PATH=$HOME/bin:$PATH
+
+# To customize prompt, run `p10k configure` or edit ~/.xxh/shells/xxh-shell-zsh/build/.p10k.zsh.
+[[ ! -f ~/.xxh/shells/xxh-shell-zsh/build/.p10k.zsh ]] || source ~/.xxh/shells/xxh-shell-zsh/build/.p10k.zsh
 
 cd ~
