@@ -21,7 +21,7 @@ fi
 mkdir -p $XDG_DATA_HOME/zsh
 
 export ZDOTDIR=$CDIR
-export PATH=$HOME/bin:$CDIR/$zshbin/bin:$PATH
+export PATH=$CDIR/$zshbin/bin:$PATH
 export SAVEHIST=10000
 export HISTFILE=$XDG_DATA_HOME/zsh/history
 

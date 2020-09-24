@@ -36,4 +36,6 @@ for pluginrc_file in $(find $CURRENT_DIR/../../../../../plugins/*-zsh-*/build -t
 done
 setopt -o nomatch
 
+export PATH=$HOME/bin:$PATH
+
 cd ~
