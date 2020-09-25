@@ -45,6 +45,12 @@ setopt -o nomatch
 
 export PATH=$HOME/bin:$PATH
 
+# fzf
+if [[ $options[zle] = on ]]; then
+  . $HOME/.config/zsh/fzf-completion.zsh
+  . $HOME/.config/zsh/fzf-key-bindings.zsh
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.xxh/shells/xxh-shell-zsh/build/.p10k.zsh.
 [[ ! -f ~/.xxh/shells/xxh-shell-zsh/build/.p10k.zsh ]] || source ~/.xxh/shells/xxh-shell-zsh/build/.p10k.zsh
 
